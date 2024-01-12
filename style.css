@@ -219,8 +219,8 @@ aside .sidebar a.active
 {
     width: 100%;
     color: var(--color-primary);
-    background: var(--color-light);
-    margin: 0;
+    background-color: var(--color-light);
+    margin-left: 0;
 }
 
 aside .sidebar a.active::before
@@ -254,4 +254,37 @@ aside .sidebar .message-count
     color: var(--color-white);
     font-size: 11px;
     border-radius: var(--border-radius-1);
+}
+
+main
+{
+    margin-top: 1.4rem;
+}
+
+main .analyses
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+main .analyse > div
+{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;       
+}
+
+main .analyse > div:hover
+{
+    box-shadow: none;
+}
+
+main .analyse > div .status
+{
+    display: flex;
 }
